@@ -1,87 +1,89 @@
----
----
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>The Digital Services Playbook — from the U.S. Digital Service</title>
-  <meta charset='UTF-8'/>
-  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-  <link href='//fonts.googleapis.com/css?family=Merriweather:400,300,700|Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
-  <link rel='shortcut icon' href='{{site.baseurl}}/assets/images/favicon.ico' type='image/x-icon' />
-  <link rel="icon" type="image/png" href="{{site.baseurl}}/assets/images/favicon-32x32.png" sizes="32x32" />
-  <link rel="icon" type="image/png" href="{{site.baseurl}}/assets/images/favicon-16x16.png" sizes="16x16" />
-  <link href='{{site.baseurl}}/assets/css/styles.css' rel='stylesheet' />
-</head>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Playbook by YOTOV-LIMITED</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Playbook</h1>
+      <h2 class="project-tagline">The Digital Services Playbook</h2>
+      <a href="https://github.com/YOTOV-LIMITED/playbook" class="btn">View on GitHub</a>
+      <a href="https://github.com/YOTOV-LIMITED/playbook/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/YOTOV-LIMITED/playbook/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
 
-<body>
+    <section class="main-content">
+      <h2>
+<a id="about-this-project" class="anchor" href="#about-this-project" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>About This Project</h2>
 
-<div id="navigation_bar">
-   <div class="outer_container">
-    <div class="inner_container">
+<p>The American people expect to interact with government through digital channels such as websites, email, and mobile applications. By building better digital services that meet the needs of the people that use our services, we can make the delivery of our policy and programs more effective.</p>
 
-      <a href="#introduction"><h3>Digital Services Playbook</h3></a>
-      <ul class="nav">
-        {% for play in site.plays %}
-          <li class="play_square"><a href="#play{{ play.play_number }}" title="View Play {{ play.play_number }}: {{ play.title }}">{{ play.play_number }}</a></li>
-        {% endfor %}
-      </ul>
-      <div id="menu_icon">
-        <a href="#plays_index_anchor" title="Return to Index"></a>
-      </div>
-    </div>
-  </div>
-</div>
+<p>One way to advance smarter digital service delivery is by putting the right processes and practices in place to drive outcomes and accountability and allow people and companies to do their best work.  The Digital Services Playbook and the TechFAR Handbook document these best practices and processes: </p>
 
-<div id="introduction">
-  <div class="outer_container">
-    <div class="inner_container">
-      <a id="usds_logo" href="https://www.usds.gov" title="Link to the United States Digital Service"><img src='{{site.baseurl}}/assets/images/USDS-logo-rays-transparent.png' alt="Logo of the United States Digital Service"></a>
-      {% capture introduction %}{% include introduction.md %}{% endcapture %}
-      {{ introduction | markdownify }}
-      <div class="button">
-        <a href="#plays_index_anchor" title="View the Plays">See the plays</a>
-      </div>
-      <div class="button">
-        <a href="https://github.com/whitehouse/playbook#readme" title="Visit Github to Improve This Content">Help improve this content</a>
-      </div>
-    </div>
-  </div>
-</div>
+<ul>
+<li>
+<a href="http://playbook.cio.gov" title="Link to the Digital Services Playbook"><strong>The Digital Services Playbook</strong></a> identifies a series of “plays” drawn from successful best practices from the private sector and government that, if followed together, will help government build effective digital services.  The plays outline an approach to delivering services that increases our ability to be flexible, iterative and, most importantly, to focus on the needs of the people that use our services.</li>
+<li>
+<a href="http://playbook.cio.gov/techfar" title="Link to the TechFAR Handbook"><strong>The TechFAR Handbook</strong></a> highlights the flexibilities in the Federal Acquisition Regulation (FAR) that can help agencies implement “plays” from the Playbook that would be accomplished with acquisition support – with a particular focus on how to use contractors to support an iterative, customer-driven software development process, as is routinely done in the private sector.</li>
+</ul>
 
-<div id="plays_index">
-  <div class="outer_container">
-    <div class="inner_container">
-      <a class="anchor_offset" id="plays_index_anchor"></a>
-      <h2>Digital Service Plays</h2>
-      <div class="columns">
-        <ol>
-        {% for play in site.plays %}
-          <li><a href="#play{{ play.play_number }}" title="View Play {{ play.play_number }}">{{ play.title }}</a></li>
-        {% endfor %}
-        </ol>
-      </div>
-      <div class="button">
-        <a href="#play1" title="View the In Detail">In detail</a>
-      </div>
-    </div>
-  </div>
-</div>
+<h2>
+<a id="we-want-your-feedback" class="anchor" href="#we-want-your-feedback" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>We Want Your Feedback</h2>
 
-<div id="plays" class="outer_container">
-  {% for play in site.plays %}
-    <div class="inner_container">
-      <a class="anchor_offset" id="play{{ play.play_number }}"></a>
-      <h6>PLAY {{ play.play_number }}</h6>
-      <h2 class="display">{{ play.title }}</h2>
+<p>We encourage your feedback and suggestions on these documents. Content and feature suggestions and discussions are welcome via <a href="https://github.com/WhiteHouse/playbook/issues">GitHub Issues</a>. You may also propose changes to the content directly by submitting a <a href="https://help.github.com/articles/creating-a-pull-request" title="More Information on Submitting Pull Requests">pull request</a>.</p>
 
-      {{ play.output }}
-    </div>
-  {% endfor %}
-</div>
+<p>You don't need to install any software to suggest a change. To propose a change from your browser, <a href="https://github.com/WhiteHouse/playbook/tree/gh-pages/_plays" title="Link to the Plays Markdown files">select a play in the <code>_plays</code> folder</a>, or open the <a href="https://github.com/WhiteHouse/playbook/blob/gh-pages/_includes/techfar-online.md" title="Link to the TechFAR Markdown File">TechFAR file</a>. You can use GitHub's in-browser editor to edit files and submit a "pull request" for your changes to be merged into the document. </p>
 
-<script src='{{site.baseurl}}/assets/js/jquery-1.11.1.min.js'></script>
-<script src='{{site.baseurl}}/assets/js/scrollspy.js'></script>
-<script src='{{site.baseurl}}/assets/js/site.js'></script>
-<script id="_fed_an_js_tag" type="text/javascript" src="{{site.baseurl}}/assets/js/federated-analytics.all.min.js?agency=GSA&sub-agency=OGP"></script>
-</body>
+<p>If you would like to see and discuss the changes that other people have proposed, <a href="https://github.com/WhiteHouse/playbook/pulls" title="Link to the Pull Requests Section of GitHub">visit the "Pull Requests" section</a> and <a href="https://github.com/WhiteHouse/playbook/issues" title="Link to the Issues Section of GitHub">browse the issues</a>.</p>
+
+<p>Feedback collected before September 1, 2014 will be considered for inclusion in the next release of the Digital Services Playbook and the TechFAR Handbook.</p>
+
+<h2>
+<a id="technical-details" class="anchor" href="#technical-details" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Technical Details</h2>
+
+<p>The Playbook and the TechFAR Handbook are compiled from <a href="https://help.github.com/articles/github-flavored-markdown" title="Link to More Information About Markdown">Markdown</a> files using <a href="https://github.com/jekyll/jekyll" title="Link to More Information about Jekyll">Jekyll</a>. To propose a specific change, you can submit a <a href="https://help.github.com/articles/creating-a-pull-request" title="More Information on Submitting Pull Requests">pull request</a> with your change to one of these source Markdown files. The Plays from the Playbook are <a href="https://github.com/WhiteHouse/playbook/tree/gh-pages/_plays" title="Link to the Plays Markdown files">available in the <code>_plays</code> folder</a>, while the <a href="https://github.com/WhiteHouse/playbook/blob/gh-pages/_includes/techfar-online.md" title="Link to the TechFAR Markdown File">TechFAR is contained in this markdown file</a>.</p>
+
+<p>You can also use Github's in-browser editing feature to make an edit to one of these Markdown files and submit your change for consideration without needing to install any additional software.</p>
+
+<h3>
+<a id="running-the-site-locally" class="anchor" href="#running-the-site-locally" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Running the Site Locally</h3>
+
+<p>To run the site locally on your own computer (most helpful for previewing your own changes), you will need to install Jekyll and other dependencies:</p>
+
+<ol>
+<li>If you don't already have Ruby and Bundler installed, follow <a href="https://help.github.com/articles/using-jekyll-with-pages#installing-jekyll" title="Installation instructions for Jekyll">the first two steps in these Jekyll installation instructions</a>.</li>
+<li>Next, <a href="http://help.github.com/fork-a-repo/" title="Instructions for Forking Your Repository">fork this repository</a> and clone it on your computer.</li>
+<li>Navigate to the folder on your computer, and run the command <code>bundle install</code> at the command line prompt.</li>
+</ol>
+
+<p>To run the site locally, run <code>jekyll serve --watch</code>, then visit <code>http://localhost:4000/</code> in your browser to preview the site.</p>
+
+<h3>
+<a id="editing-the-stylesheets" class="anchor" href="#editing-the-stylesheets" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Editing the Stylesheets</h3>
+
+<p>This project uses <a href="http://sass-lang.com/" title="Link to Learn More About Sass">Sass</a> for managing its style sheets. These styles are defined in the <a href="assets/_sass/styles.scss"><code>styles.scss</code> file</a>. We use <a href="http://jekyllrb.com/docs/assets/">Jekyll's native SASS support</a> to auto-generate the required CSS when you run the site locally, as described above.</p>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h2>
+
+<p>As a work of the United States Government, this project is in the public domain within the United States.</p>
+
+<p>Additionally, we waive copyright and related rights in the work worldwide through the <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0 Universal public domain dedication</a>.</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/YOTOV-LIMITED/playbook">Playbook</a> is maintained by <a href="https://github.com/YOTOV-LIMITED">YOTOV-LIMITED</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
 </html>
